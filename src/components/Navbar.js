@@ -2,9 +2,12 @@ import React from 'react';
 import { navLinks } from '../utils';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../context';
 import Logo from './Logo';
 import styled from 'styled-components';
 const Navbar = () => {
+  const { toggleSidebar } = useGlobalContext();
+
   return (
     <Wrapper>
       <div className='nav-center'>
@@ -23,7 +26,7 @@ const Navbar = () => {
         </ul>
         <div className='nav-right'>
           <span className='shop nav-link'>Shop</span>
-          <GiHamburgerMenu className='hamburger' />
+          <GiHamburgerMenu className='hamburger' onClick={toggleSidebar} />
         </div>
       </div>
     </Wrapper>
@@ -81,7 +84,7 @@ const Wrapper = styled.nav`
   .shop {
     display: none;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     .nav-center .logo-container {
       justify-content: flex-start;
       flex: none;

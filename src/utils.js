@@ -36,3 +36,27 @@ export const navLinks = [
     text: 'starlink',
   },
 ];
+
+export const sidebarLinks = [
+  {
+    id: 1,
+    text: 'mission',
+  },
+
+  {
+    id: 2,
+    text: 'launchers',
+  },
+  {
+    id: 3,
+    text: 'careers',
+  },
+  {
+    id: 4,
+    text: 'updates',
+  },
+  {
+    id: 5,
+    text: 'shop',
+  },
+];

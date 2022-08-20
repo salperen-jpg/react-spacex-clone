@@ -45,6 +45,9 @@ const Wrapper = styled.section`
     h2 {
       text-transform: uppercase;
     }
+    h2 {
+      max-width: 30rem;
+    }
     h4 {
       font-weight: 400;
     }
