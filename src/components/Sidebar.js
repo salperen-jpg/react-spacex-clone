@@ -9,7 +9,7 @@ const Sidebar = () => {
     <Wrapper>
       <div className={isSidebarOpen ? 'sidebar open' : 'sidebar'}>
         <div
-          className={isSidebarOpen ? 'sidebar-content show' : 'sidebar-content'}
+          className={isSidebarOpen ? 'sidebar-content open' : 'sidebar-content'}
         >
           <div className='btn-container'>
             <button className='btn close-btn' onClick={toggleSidebar}>
@@ -37,12 +37,11 @@ const Wrapper = styled.aside`
     inset: 0;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: -99;
-    visibility: hidden;
-    transition: var(--transition);
+
+    transition: all 0.6s linear;
   }
   .open {
     z-index: 99;
-    visibility: visible;
   }
 
   .sidebar-content {
@@ -54,7 +53,8 @@ const Wrapper = styled.aside`
     background-color: var(--clr-black);
     padding: 2rem;
     transform: translateX(100%);
-    transition: all 0.6s ease-in;
+    transition: all 0.9s linear;
+
     .btn-container {
       text-align: right;
       .close-btn {
@@ -81,7 +81,7 @@ const Wrapper = styled.aside`
       }
     }
   }
-  .show {
+  .sidebar-content.open {
     transform: translateX(0);
   }
 `;

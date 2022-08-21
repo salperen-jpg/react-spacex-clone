@@ -1,6 +1,6 @@
 import { useGlobalContext } from './context';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from './pages';
+import { FalconHeavy, Home } from './pages';
 import { Navbar, Sidebar } from './components';
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/falconHeavy' element={<FalconHeavy />} />
       </Routes>
     </BrowserRouter>
   );

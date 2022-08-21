@@ -47,9 +47,11 @@ const Wrapper = styled.section`
     }
     h2 {
       max-width: 30rem;
+      animation: fadeUp 0.6s ease-in-out 0.2s;
     }
     h4 {
       font-weight: 400;
+      animation: fadeUp 0.6s ease-in-out;
     }
   }
   button {
@@ -66,6 +68,7 @@ const Wrapper = styled.section`
     overflow: hidden;
     z-index: 2;
     transition: var(--transition);
+    animation: fadeUp 0.6s ease-in-out 0.4s;
   }
   button:hover {
     color: var(--clr-black);
@@ -81,5 +84,16 @@ const Wrapper = styled.section`
   }
   button:hover::after {
     transform: translateY(0);
+  }
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
