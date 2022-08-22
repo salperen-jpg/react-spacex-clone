@@ -60,3 +60,34 @@ export const sidebarLinks = [
     text: 'shop',
   },
 ];
+
+export const socialLinks = [
+  {
+    id: 1,
+    text: 'twitter',
+  },
+  {
+    id: 2,
+    text: 'youtube',
+  },
+  {
+    id: 3,
+    text: 'instagram',
+  },
+  {
+    id: 4,
+    text: 'flickr',
+  },
+  {
+    id: 5,
+    text: 'linkedin',
+  },
+  {
+    id: 6,
+    text: 'privacy policy',
+  },
+  {
+    id: 5,
+    text: 'suppliers',
+  },
+];
