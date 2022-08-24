@@ -87,7 +87,7 @@ export const socialLinks = [
     text: 'privacy policy',
   },
   {
-    id: 5,
+    id: 7,
     text: 'suppliers',
   },
 ];

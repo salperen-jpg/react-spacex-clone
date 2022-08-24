@@ -74,3 +74,12 @@ h4 {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+.nav-none {
+  visibility: hidden;
+  z-index: -9;
+}
+.show-nav {
+  visibility: visible;
+  z-index: 999;
+}

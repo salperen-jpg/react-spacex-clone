@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { navLinks } from '../utils';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,14 @@ import Logo from './Logo';
 import styled from 'styled-components';
 const Navbar = () => {
   const { toggleSidebar } = useGlobalContext();
+  const [mouse, setMouse] = React.useState(true);
+  const updateState = () => {
+    console.log(1);
+  };
 
+  useEffect(() => {
+    document.body.addEventListener('mousedown', updateState);
+  }, [mouse]);
   return (
     <Wrapper>
       <div className='nav-center'>
@@ -41,13 +48,14 @@ const Wrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-
+  transition: all 0.3s linear;
   .nav-center {
     width: min(90vw, 1400px);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s linear;
   }
   .nav-center .logo-container {
     flex: 1;

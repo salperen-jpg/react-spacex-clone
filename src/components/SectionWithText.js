@@ -4,7 +4,7 @@ const SectionWithText = ({ imgUrl, text, exp }) => {
   return (
     <Wrapper style={{ background: `url(${imgUrl})` }}>
       <div className='banner'>
-        <h1>{text}</h1>
+        <span>{text}</span>
         <p>{exp}</p>
       </div>
     </Wrapper>
@@ -18,13 +18,34 @@ const Wrapper = styled.section`
   background-size: cover;
   display: grid;
   place-items: center;
-  h1 {
-    text-transform: uppercase;
-    font-size: 5rem;
-  }
-  p {
+  .banner {
     text-align: center;
     text-transform: uppercase;
+    font-weight: 600;
+  }
+  span {
+    font-size: 3rem;
+  }
+  p {
+    max-width: 15rem;
+    margin-inline: auto;
+  }
+  @media (min-width: 800px) {
+    span {
+      font-size: 4rem;
+    }
+    p {
+      max-width: max-content;
+    }
+  }
+  @media (min-width: 800px) {
+    span {
+      font-size: 6rem;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
   }
 `;
 

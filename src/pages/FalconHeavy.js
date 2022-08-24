@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from '../components/Counter';
 import SectionWithText from '../components/SectionWithText';
 
 const FalconHeavy = () => {
@@ -9,6 +10,7 @@ const FalconHeavy = () => {
         text='falcon heavy'
         exp={"the world's most powerful rocket"}
       />
+      <Counter />
     </div>
   );
 };
