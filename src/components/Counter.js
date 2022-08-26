@@ -6,8 +6,8 @@ const Counter = () => {
     <Wrapper>
       <div className='counter-center'>
         <CounterComponent text='total launches' number={3} timeout={400} />
-        <CounterComponent text='total landings' number={7} timeout={800} />
-        <CounterComponent text='total reflights' number={4} timeout={900} />
+        <CounterComponent text='total landings' number={7} timeout={300} />
+        <CounterComponent text='total reflights' number={4} timeout={500} />
       </div>
     </Wrapper>
   );

@@ -31,12 +31,12 @@ const Wrapper = styled.footer`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     gap: 1rem;
     li {
       font-size: 0.7rem;
       text-transform: uppercase;
       font-weight: 700;
+      cursor: pointer;
     }
   }
   @media (min-width: 800px) {

@@ -7,17 +7,20 @@ import Logo from './Logo';
 import styled from 'styled-components';
 const Navbar = () => {
   const { toggleSidebar } = useGlobalContext();
-  const [mouse, setMouse] = React.useState(true);
-  const updateState = () => {
-    console.log(1);
+  const [scrollDown, setScrollDown] = React.useState(false);
+  const updateState = (event) => {
+    if (event.deltaY < 0) {
+      setScrollDown(false);
+    } else if (event.deltaY > 0) {
+      setScrollDown(true);
+    }
   };
-
   useEffect(() => {
-    document.body.addEventListener('mousedown', updateState);
-  }, [mouse]);
+    document.body.addEventListener('wheel', updateState);
+  }, [scrollDown]);
   return (
     <Wrapper>
-      <div className='nav-center'>
+      <div className={`nav-center ${scrollDown ? 'nav-none' : 'show-nav'}`}>
         <div className='logo-container'>
           <Logo />
         </div>
@@ -48,7 +51,18 @@ const Wrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.3s linear;
+  transition: all 0.4s ease-in-out;
+
+  .nav-none {
+    opacity: 0;
+  }
+  .show-nav {
+    /* visibility: visible;
+
+    height: auto; */
+    opacity: 1;
+  }
+
   .nav-center {
     width: min(90vw, 1400px);
     margin: 0 auto;
