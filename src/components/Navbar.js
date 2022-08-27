@@ -51,16 +51,16 @@ const Wrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.4s ease-in-out;
 
   .nav-none {
     opacity: 0;
+    visibility: hidden;
+    z-index: -99;
   }
   .show-nav {
-    /* visibility: visible;
-
-    height: auto; */
+    visibility: visible;
     opacity: 1;
+    z-index: 99;
   }
 
   .nav-center {
@@ -69,7 +69,7 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.3s linear;
+    transition: opacity 1s ease-in-out;
   }
   .nav-center .logo-container {
     flex: 1;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useGlobalContext } from '../context';
 import { sidebarLinks } from '../utils';
 import { MdOutlineClose } from 'react-icons/md';
+import { navLinks } from '../utils';
 import styled from 'styled-components';
 const Sidebar = () => {
   const { isSidebarOpen, toggleSidebar } = useGlobalContext();
@@ -12,12 +13,21 @@ const Sidebar = () => {
           className={isSidebarOpen ? 'sidebar-content open' : 'sidebar-content'}
         >
           <div className='btn-container'>
-            <button className='btn close-btn' onClick={toggleSidebar}>
+            <button className=' close-btn' onClick={toggleSidebar}>
               <MdOutlineClose />
             </button>
           </div>
           <ul>
             {sidebarLinks.map((link) => {
+              return (
+                <li key={link.id} className='sidebarLink'>
+                  {link.text}
+                </li>
+              );
+            })}
+          </ul>
+          <ul className='nav-links'>
+            {navLinks.map((link) => {
               return (
                 <li key={link.id} className='sidebarLink'>
                   {link.text}
@@ -78,6 +88,11 @@ const Wrapper = styled.aside`
       }
       li:hover {
         color: #ccc;
+      }
+    }
+    @media (min-width: 800px) {
+      .nav-links {
+        display: none;
       }
     }
   }

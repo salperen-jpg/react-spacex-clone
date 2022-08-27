@@ -1,7 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import CounterComponent from './CounterComponent';
-const Counter = () => {
+const Counter = ({ dragon }) => {
+  if (dragon) {
+    return (
+      <Wrapper>
+        <div className='counter-center'>
+          <CounterComponent text='total launches' number={35} timeout={60} />
+          <CounterComponent text='visits to the iss' number={32} timeout={80} />
+          <CounterComponent text='reflown missions' number={15} timeout={100} />
+        </div>
+      </Wrapper>
+    );
+  }
   return (
     <Wrapper>
       <div className='counter-center'>

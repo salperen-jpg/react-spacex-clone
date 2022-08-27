@@ -13,7 +13,7 @@ const SectionWithButton = ({ img, recentLaunch, buttonText, text }) => {
           <div className='banner'>
             {recentLaunch && <h4>{recentLaunch}</h4>}
             <h2>{text}</h2>
-            <button>{buttonText}</button>
+            <button className='btn'>{buttonText}</button>
           </div>
         </div>
       </section>
@@ -54,37 +54,7 @@ const Wrapper = styled.section`
       animation: fadeUp 0.6s ease-in-out;
     }
   }
-  button {
-    display: inline-block;
-    padding: 1.25rem 2rem;
-    background-color: transparent;
-    color: var(--clr-white);
-    border: 2px solid var(--clr-white);
-    font-size: 0.775rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 2;
-    transition: var(--transition);
-    animation: fadeUp 0.6s ease-in-out 0.4s;
-  }
-  button:hover {
-    color: var(--clr-black);
-  }
-  button::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    transform: translateY(100%);
-    background-color: var(--clr-white);
-    transition: var(--transition);
-    z-index: -1;
-  }
-  button:hover::after {
-    transform: translateY(0);
-  }
+
   @keyframes fadeUp {
     0% {
       opacity: 0;

@@ -74,11 +74,36 @@ h4 {
   max-width: 1400px;
   margin: 0 auto;
 }
-.nav-none {
-  visibility: hidden;
-  z-index: -9;
+
+/* button */
+.btn {
+  display: inline-block;
+  padding: 1.25rem 2rem;
+  background-color: transparent;
+  color: var(--clr-white);
+  border: 2px solid var(--clr-white);
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 2;
+  transition: var(--transition);
+  animation: fadeUp 0.6s ease-in-out 0.4s;
 }
-.show-nav {
-  visibility: visible;
-  z-index: 999;
+.btn:hover {
+  color: var(--clr-black);
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  background-color: var(--clr-white);
+  transition: var(--transition);
+  z-index: -1;
+}
+.btn:hover::after {
+  transform: translateY(0);
 }
