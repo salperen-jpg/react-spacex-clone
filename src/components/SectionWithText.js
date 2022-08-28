@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollDown from './ScrollDown';
 const SectionWithText = ({ imgUrl, text, exp }) => {
   return (
     <Wrapper style={{ background: `url(${imgUrl})` }}>
@@ -7,6 +8,7 @@ const SectionWithText = ({ imgUrl, text, exp }) => {
         <span>{text}</span>
         <p>{exp}</p>
       </div>
+      <ScrollDown />
     </Wrapper>
   );
 };

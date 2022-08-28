@@ -44,6 +44,8 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.nav`
+  position: relative;
+  z-index: 9999;
   height: 100px;
   display: flex;
   align-items: center;

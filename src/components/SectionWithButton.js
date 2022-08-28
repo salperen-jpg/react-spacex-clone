@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollDown from './ScrollDown';
 const SectionWithButton = ({ img, recentLaunch, buttonText, text }) => {
   return (
     <Wrapper>
@@ -16,6 +17,7 @@ const SectionWithButton = ({ img, recentLaunch, buttonText, text }) => {
             <button className='btn'>{buttonText}</button>
           </div>
         </div>
+        <ScrollDown />
       </section>
     </Wrapper>
   );
@@ -24,6 +26,7 @@ const SectionWithButton = ({ img, recentLaunch, buttonText, text }) => {
 export default SectionWithButton;
 
 const Wrapper = styled.section`
+  position: relative;
   .page-100 {
     background-position: center;
     background-repeat: no-repeat;
