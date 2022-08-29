@@ -53,6 +53,7 @@ const Wrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+  transition: opacity 1s ease-in-out;
 
   .nav-none {
     opacity: 0;
@@ -71,6 +72,7 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     transition: opacity 1s ease-in-out;
   }
   .nav-center .logo-container {
