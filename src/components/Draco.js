@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-const Draco = ({ title, exp, underline }) => {
+const Draco = ({ title, exp, underline, draco, raptor }) => {
   return (
     <Wrapper>
       <div className='draco-center'>
         <div className='banner'>
           <div className='titles'>
             <span>engines</span>
-            <h3></h3>
+            <h3>{title}</h3>
           </div>
           {underline && (
             <div className='secondary-title'>
@@ -18,16 +18,42 @@ const Draco = ({ title, exp, underline }) => {
           )}
           <p>{exp}</p>
           <div className='table'>
-            <p>
-              <span>number of engines</span>
-              <span>16</span>
-            </p>
-            <p>
-              <span>thrust in vacuum</span>
-              <span>
-                400N / <span className='fade-text'> 90 lbf</span>
-              </span>
-            </p>
+            {draco && (
+              <>
+                <p>
+                  <span>number of engines</span>
+                  <span>16</span>
+                </p>
+                <p>
+                  <span>thrust in vacuum</span>
+                  <span>
+                    400N / <span className='fade-text'> 90 lbf</span>
+                  </span>
+                </p>
+              </>
+            )}
+            {raptor && (
+              <>
+                <p>
+                  <span>DIAMETER</span>
+                  <span>
+                    1.3 m <span className='fade-text'>/ 4 ft</span>
+                  </span>
+                </p>
+                <p>
+                  <span>HEIGHT</span>
+                  <span>
+                    3.1 m <span className='fade-text'> / 10.2 ft</span>
+                  </span>
+                </p>
+                <p>
+                  <span>THRUST</span>
+                  <span>
+                    230 tf <span className='fade-text'> / 500 klbf </span>
+                  </span>
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>

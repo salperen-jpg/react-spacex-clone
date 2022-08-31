@@ -35,6 +35,7 @@ const Dragon = () => {
             thruster is capable of generating 90 pounds of force in the vacuum
             of space.'
             underline
+            draco
           />
         </Banners>
       </div>

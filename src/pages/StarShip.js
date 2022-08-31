@@ -22,7 +22,11 @@ const StarShip = () => {
         />
       </Banners>
       <Banners draco imgUrl={require('../assets/Raptor.webp')}>
-        <Draco />
+        <Draco
+          title='raptor'
+          exp='The Raptor engine is a reusable methalox staged-combustion engine that powers the Starship launch system. Raptor engines began flight testing on the Starship prototype rockets in July 2019, becoming the first full-flow staged combustion rocket engine ever flown.'
+          raptor
+        />
       </Banners>
     </>
   );
