@@ -14,12 +14,14 @@ const SectionWithText = ({ imgUrl, text, exp }) => {
 };
 
 const Wrapper = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   .banner {
     text-align: center;
     text-transform: uppercase;

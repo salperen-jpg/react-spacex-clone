@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SectionWithText from '../components/SectionWithText';
 import Banners from '../components/Banners';
 import SpaceFlightBanner from '../components/SpaceFlightBanner';
+import HumanFooter from '../components/HumanFooter';
 
 const HumanSpaceFlight = () => {
   return (
@@ -41,6 +42,7 @@ const HumanSpaceFlight = () => {
           exp='the road to making humanity multiplanetary'
         />
       </Banners>
+      <HumanFooter />
     </Wrapper>
   );
 };
