@@ -5,6 +5,7 @@ import Banners from '../components/Banners';
 import DragonBanner from '../components/DragonBanner';
 import Draco from '../components/Draco';
 import PrivateLunar from '../components/PrivateLunar';
+import StarShipForm from '../components/StarShipForm';
 const StarShip = () => {
   return (
     <>
@@ -30,6 +31,7 @@ const StarShip = () => {
         />
       </Banners>
       <PrivateLunar />
+      <StarShipForm />
     </>
   );
 };

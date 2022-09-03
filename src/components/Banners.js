@@ -14,5 +14,8 @@ const Banners = ({ imgUrl, children, draco }) => {
 const Wrapper = styled.section`
   padding: 2rem 0;
   height: 100vh;
+  position: relative;
+  background-position-x: 50%;
+  background-position-y: 50%;
 `;
 export default Banners;
