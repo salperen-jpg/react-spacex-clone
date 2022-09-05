@@ -91,3 +91,24 @@ export const socialLinks = [
     text: 'suppliers',
   },
 ];
+
+export const rideShareFeatures = [
+  {
+    id: 1,
+    text: '$1.1M for 200kg to SSO with additional mass at $5.5k/kg. Affordable rates also available to Mid-Inclination LEO, GTO, and TLI.',
+    title: 'COST AS LOW AS $1.1M',
+    img: 'https://www.spacex.com/static/images/rideshare/billing_icon.png',
+  },
+  {
+    id: 2,
+    text: 'SSO missions approximately every 4 months. Frequent launches to mid-inclination. Inquire for other orbits.',
+    title: 'SCHEDULE CERTAINTY',
+    img: 'https://www.spacex.com/static/images/rideshare/calendar_icon.png',
+  },
+  {
+    id: 3,
+    text: 'If your payload is delayed, apply 100% of monies paid toward the cost of rebooking on a future mission, subject to a 10% rebooking fee.',
+    title: 'CONTRACT FLEXIBILITY',
+    img: 'https://www.spacex.com/static/images/rideshare/contract_icon.png',
+  },
+];

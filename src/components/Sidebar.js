@@ -51,7 +51,7 @@ const Wrapper = styled.aside`
     transition: all 0.6s linear;
   }
   .open {
-    z-index: 99;
+    z-index: 9999;
   }
 
   .sidebar-content {
