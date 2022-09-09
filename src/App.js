@@ -5,6 +5,7 @@ import {
   Home,
   HumanSpaceFlight,
   RideShare,
+  Starlink,
   StarShip,
 } from './pages';
 import { Footer, Navbar, Sidebar } from './components';
@@ -20,6 +21,7 @@ function App() {
         <Route path='/starship' element={<StarShip />} />
         <Route path='/humanSpaceFlight' element={<HumanSpaceFlight />} />
         <Route path='/rideShare' element={<RideShare />} />
+        <Route path='/starlink' element={<Starlink />} />
       </Routes>
       <Footer />
     </BrowserRouter>

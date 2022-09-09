@@ -7,7 +7,11 @@ import RideShareBanner from '../components/RideShareBanner';
 const RideShare = () => {
   return (
     <>
+      <Banners imgUrl={require('../assets/rideshare0.webp')}>
+        {/* coming up */}
+      </Banners>
       <RideShareFeatures />
+
       <Banners imgUrl={require('../assets/rideshare.webp')}>
         <RideShareBanner
           title='RESERVE YOUR RIDE ONLINE'
